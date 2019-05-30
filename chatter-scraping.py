@@ -75,7 +75,7 @@ def serch():
  print(textelements)
  commentlist = []
  for ele in textelements:
-     if "お疲れ様です。" in ele.text:
+     if inifile.get('search', 'searchword') in ele.text:
            commentlist.append(ele.text)
            print(ele.parent)
            print(ele.text)
